@@ -25,9 +25,12 @@
 		"eject": "react-scripts eject",
 		"storybook": "start-storybook -p 6006 -s public",
 		"build-storybook": "build-storybook -s public",
-		"prettier": "prettier \"**/*.+(js|jsx|json|css|scss|ts|tsx|md|mdx|graphql)\"",
+		"prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|json|css|scss|ts|tsx|md|mdx|graphql)\"",
 		"format": "npm run prettier -- --write",
-		"lint": "eslint"
+		"check-format": "npm run prettier -- --list-different",
+		"lint": "eslint --ignore-path .gitignore",
+		"check-types": "tsc",
+		"validate": "npm run check-types && npm run check-format && npm run lint && npm run build"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -37,8 +40,13 @@
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "lint-staged"
+			"pre-commit": "npm run validate"
 		}
+	},
+	"lint-staged": {
+		"src/**/*.{js,jsx,ts,tsx,json,css,scss,md,mdx,graphql}": [
+			"prettier --write"
+		]
 	},
 	"browserslist": {
 		"production": [
