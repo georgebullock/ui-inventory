@@ -40,12 +40,16 @@
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "npm run validate"
+			"pre-commit": "lint-staged"
 		}
 	},
 	"lint-staged": {
-		"src/**/*.{js,jsx,ts,tsx,json,css,scss,md,mdx,graphql}": [
-			"prettier --write"
+		"*.+(js|ts|tsx)": [
+			"eslint"
+		],
+		"**/*.+(js|json|ts|tsx)": [
+			"prettier --write",
+			"git add"
 		]
 	},
 	"browserslist": {
