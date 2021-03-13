@@ -27,7 +27,7 @@ performance.
 
 ## Component Inv
 
-### Layout Components from [Every Layout](https://every-layout.dev/)
+### LAYOUT COMPONENTS via [EVERY LAYOUT](https://every-layout.dev/)
 
 - [ ] The Stack
 
@@ -53,7 +53,11 @@ performance.
 
 - [ ] The Icon
 
-### UI Components
+### Grid
+
+- [ ] Grid
+
+### UI COMPONENTS
 
 - [ ] App Bars:
 
@@ -127,7 +131,7 @@ performance.
 
 - [ ] Menus:
 
-  - [ ] Dropdown menu: (Can be composed)
+  - [ ] Dropdown Menu
 
   - [ ] Cascade
 
