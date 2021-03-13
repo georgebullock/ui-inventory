@@ -1,7 +1,7 @@
 # UI Inventory
 
-UI Inventory is a component library I'm building to bolster my UI development
-skills
+UI Inventory is a React component library I'm building to bolster my UI
+engineering skills
 
 ## Available Scripts
 
