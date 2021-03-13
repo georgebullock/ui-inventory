@@ -1,11 +1,9 @@
-# Getting Started with Create React App
+# UI Inventory
 
-This project was bootstrapped with
-[Create React App](https://github.com/facebook/create-react-app).
+UI Inventory is a component library I'm building to level up my UI development
+skills
 
 ## Available Scripts
-
-In the project directory, you can run:
 
 ### `yarn start`
 
@@ -27,35 +25,138 @@ Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best
 performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Component Inventory
 
-See the section about
-[deployment](https://facebook.github.io/create-react-app/docs/deployment) for
-more information.
+- [ ] App Bars:
 
-### `yarn eject`
+  - [ ] Top
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  - [ ] Bottom
 
-If you aren’t satisfied with the build tool and configuration choices, you can
-`eject` at any time. This command will remove the single build dependency from
-your project.
+- [ ] Buttons:
 
-Instead, it will copy all the configuration files and the transitive
-dependencies (webpack, Babel, ESLint, etc) right into your project so you have
-full control over them. All of the commands except `eject` will still work, but
-they will point to the copied scripts so you can tweak them. At this point
-you’re on your own.
+  - [ ] Text & contained buttons (formerly flat & raised)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for
-small and middle deployments, and you shouldn’t feel obligated to use this
-feature. However we understand that this tool wouldn’t be useful if you couldn’t
-customize it when you are ready for it.
+  - [ ] Toggle buttons
 
-## Learn More
+  - [ ] Icon toggle buttons
 
-You can learn more in the
-[Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [ ] Card
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [ ] Input
+
+- [ ] Choice
+
+- [ ] Filter
+
+- [ ] Action
+
+- [ ] Data Tables:
+
+  - [ ] Sortable
+
+  - [ ] Selectable
+
+- [ ] Pagination
+
+- [ ] Dialogs:
+
+  - [ ] Alert dialog
+
+  - [ ] Simple dialogs
+
+  - [ ] Confirmation dialogs
+
+  - [ ] Full screen dialogs
+
+- [ ] Dividers:
+
+  - [ ] Full bleed
+
+  - [ ] Inset
+
+  - [ ] Middle
+
+  - [ ] Subheader
+
+  - [ ] Expansion Panels
+
+- [ ] Image Lists (AKA Grid Lists)
+
+- [ ] List
+
+- [ ] Avatar
+
+- [ ] Icon
+
+- [ ] Thumbnail
+
+- [ ] Controls
+
+- [ ] Checkbox
+
+- [ ] Switch
+
+- [ ] Menus:
+
+  - [ ] Dropdown menu: (Can be composed)
+
+  - [ ] Cascade
+
+- [ ] Exposed dropdown menus:
+
+  - [ ] Text field dropdown menu (Select)
+
+  - [ ] Editable dropdown menu
+
+  - [ ] Contextual
+
+- [ ] Progress indicators:
+
+  - [ ] Linear
+
+  - [ ] Circular
+
+  - [ ] Loading
+
+- [ ] Selection controls:
+
+  - [ ] Checkbox
+
+  - [ ] Radio button
+
+  - [ ] Switch
+
+- [ ] Sliders:
+
+  - [ ] Continuous
+
+  - [ ] Discrete
+
+- [ ] Tabs:
+
+  - [ ] Fixed tabs
+
+  - [ ] Scrollable tabs
+
+- [ ] Text fields:
+
+  - [ ] Standard
+
+  - [ ] Filled
+
+  - [ ] Outline
+
+- [ ] Assistive elements:
+
+  - [ ] Helper text
+
+  - [ ] Error message
+
+  - [ ] Icons
+
+  - [ ] Character counter
+
+  - [ ] Toolbars
+
+  - [ ] Tooltips
