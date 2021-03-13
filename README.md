@@ -1,6 +1,6 @@
 # UI Inventory
 
-UI Inventory is a component library I'm building to level up my UI development
+UI Inventory is a component library I'm building to bolster my UI development
 skills
 
 ## Available Scripts
@@ -25,7 +25,33 @@ Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best
 performance.
 
-## Component Inventory
+## Component Inv
+
+### Layout Components from [Every Layout](https://every-layout.dev/)
+
+- [ ] The Stack
+
+- [ ] The Box
+
+- [ ] The Center
+
+- [ ] The Cluster
+
+- [ ] The Sidebar
+
+- [ ] The Switcher
+
+- [ ] The Cover
+
+- [ ] The Grid
+
+- [ ] The Frame
+
+- [ ] The Reel
+
+- [ ] The Imposter
+
+- [ ] The Icon
 
 - [ ] App Bars:
 
