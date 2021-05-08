@@ -16,14 +16,14 @@ export const theme = {
 			small: '0.5rem'
 		},
 		colors: {
-			green: {
+			blue: {
 				100: '#225299',
 				70: '#4a83d7',
 				40: '#9ebce9',
 				20: '#d5e2f6',
 				5: '#f1f5fc'
 			},
-			yellow: {
+			orange: {
 				100: '#ff7922',
 
 				70: '#ff8e44',

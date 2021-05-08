@@ -1,24 +1,39 @@
 import React from 'react';
 import './App.css';
-import styled, { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider, css } from 'styled-components';
 import { theme } from './theme/theme';
 import { GlobalStyles } from './theme/globalStyles';
 
-const Container = styled.div`
-	display: flex;
-	width: 600px;
-	height: 900px;
-	background-color: ${props => props.theme.light.colors.green[70]};
-	font-size: ${props => props.theme.light.typography.base.fontSize};
-	line-height: ${props => props.theme.light.typography.base.lineHeight};
-	margin: 0 auto;
-`;
+const Container = styled.div(
+	({ theme }) => css`
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		color: ${theme.light.colors.blue[20]};
+		background-color: ${theme.light.colors.blue[100]};
+		font-size: ${theme.light.typography.h1.fontSize};
+		line-height: ${theme.light.typography.base.lineHeight};
+	`
+);
+
+const Box = styled.div(
+	({ theme }) => css`
+		display: flex;
+		color: ${theme.light.colors.blue[20]};
+		background-color: ${theme.light.colors.blue[100]};
+		font-size: ${theme.light.typography.h1.fontSize};
+		line-height: ${theme.light.typography.base.lineHeight};
+	`
+);
 
 function App() {
 	return (
 		<ThemeProvider theme={theme}>
 			<GlobalStyles />
-			<Container>UI Inventory</Container>
+			<Container>
+				<Box>UI Inventory</Box>
+			</Container>
 		</ThemeProvider>
 	);
 }
