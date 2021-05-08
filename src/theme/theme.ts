@@ -1,8 +1,9 @@
-import { Theme } from './ThemeInteface';
+const BASE_FONT_SIZE: number = 20;
 
-const BASE_FONT_SIZE: number = 16;
+const MODULAR_SCALE_RATIO: number = 1.25;
 
-const scale = {
+// Typography scale
+const typography = {
 	xs: 2,
 	s: 4,
 	m: 8,
@@ -12,18 +13,6 @@ const scale = {
 	xxl: 128
 };
 
-const spacing = {
-	xs: () => `${scale.xs / BASE_FONT_SIZE}rem`,
-	s: () => `${scale.s / BASE_FONT_SIZE}rem`,
-	m: () => `${scale.m / BASE_FONT_SIZE}rem`,
-	base: () => `${scale.base / BASE_FONT_SIZE}rem`,
-	l: () => `${scale.xl / BASE_FONT_SIZE}rem`,
-	xl: () => `${scale.xxl / BASE_FONT_SIZE}rem`,
-	xxl: () => `${scale.xxl / BASE_FONT_SIZE}rem`
-};
-
-console.log('spacing.xxl :', spacing.xxl());
-
 const breakpoints = {
 	mobileM: '22.5em', // 22.5 * 16 = 360px
 	tablet: '36em', // 36 * 16 = 576px
@@ -32,7 +21,7 @@ const breakpoints = {
 	desktopL: '120em' // 120 * 16 = 1920px
 };
 
-export const theme: Theme = {
+export const theme = {
 	light: {
 		borderRadius: {
 			normal: '1rem',
@@ -40,67 +29,68 @@ export const theme: Theme = {
 		},
 		colors: {
 			green: {
-				100: '#005039',
-				70: '#4c8474',
-				40: '#99b9b0',
-				20: '#ccdcd7',
-				10: '#e5edeb',
-				5: '#F2F6F5'
+				100: '#225299',
+				70: '#4a83d7',
+				40: '#9ebce9',
+				20: '#d5e2f6',
+				5: '#f1f5fc'
 			},
 			yellow: {
-				100: '#e8b000',
-				70: '#eec74c',
-				40: '#f6df99',
-				20: '#faefcc',
-				10: '#fcf7e5',
-				5: '#FEFBF2',
+				100: '#ff7922',
+
+				70: '#ff8e44',
+				40: '#ffb788',
+				20: '#ffe0cc',
+				5: '#fff5ee',
 				gradients: {
-					horizontal: 'linear-gradient(90deg, #FCCB41 0%, #D19900 100%)',
-					horizontalHover: 'linear-gradient(90deg, #FAD878 0%, #E0B94F 100%)'
+					horizontal: 'linear-gradient(90deg, #ff8e44 0%, #ff7922 100%)',
+					horizontalHover: 'linear-gradient(90deg, #ffe0cc 0%, #ffb788 100%)'
 				}
 			},
 			grey: {
-				100: '#2c3331',
+				100: '#222222',
 				70: '#4e4e4e',
-				40: '#a9a9a9',
-				20: '#cccccc',
-				10: '#efefef',
-				5: '#fbfbfb',
-				gradients: {
-					horizontal: 'linear-gradient(270deg, #003C2B 0.21%, #011610 100%)'
-				}
+				40: '#7a7a7a',
+				20: '#a6a6a6',
+				10: '#d2d2d2',
+				5: '#e8e8e8'
 			},
 			background: {
-				primary: '#ffffff',
-				secondary: '#fbfbfb',
+				primary: '#fff',
+				secondary: '#f4f4f4',
 				transparent: 'transparent'
 			},
 			success: {
-				background: '#e3f4e6',
-				foreground: '#49b85c'
+				background: '#dbeedd',
+				foreground: '#4daa57'
 			},
 			info: {
-				light: '#F6FAFD',
-				background: '#E4EEF8',
-				foreground: '#5092D4'
+				light: '#e8f3fc',
+				background: '#a3d2f3',
+				foreground: '#1a8fe3'
 			},
 			warn: {
-				background: '#fef5e1',
-				foreground: '#fabc37'
+				background: '#fcf3cf',
+				foreground: '#f1c40f'
 			},
 			error: {
-				background: '#F9E4E1',
-				foreground: '#db5039'
+				background: '#ffd6d2',
+				foreground: '#ff331f'
 			}
 		},
-		// spacing: {
-		// 	xs: () => `${scale.xs / BASE_FONT_SIZE}rem`,
-		// 	s: () => `${scale.s / BASE_FONT_SIZE}rem`,
-		// 	m: () => `${scale.m / BASE_FONT_SIZE}rem`,
-		// 	l: () => `${scale.l / BASE_FONT_SIZE}rem`,
-		// 	xl: () => `${scale.xl / BASE_FONT_SIZE}rem`,
-		// 	xxl: () => `${scale.xxl / BASE_FONT_SIZE}rem`
-		// },
+		spacing: {
+			sd5: Math.pow(BASE_FONT_SIZE, 5) / MODULAR_SCALE_RATIO,
+			sd4: Math.pow(BASE_FONT_SIZE, 4) / MODULAR_SCALE_RATIO,
+			sd3: Math.pow(BASE_FONT_SIZE, 3) / MODULAR_SCALE_RATIO,
+			sd2: Math.pow(BASE_FONT_SIZE, 2) / MODULAR_SCALE_RATIO,
+			sd1: BASE_FONT_SIZE / MODULAR_SCALE_RATIO,
+			s0: BASE_FONT_SIZE,
+			su1: BASE_FONT_SIZE * MODULAR_SCALE_RATIO,
+			su2: Math.pow(BASE_FONT_SIZE, 2) * MODULAR_SCALE_RATIO,
+			su3: Math.pow(BASE_FONT_SIZE, 3) * MODULAR_SCALE_RATIO,
+			su4: Math.pow(BASE_FONT_SIZE, 4) * MODULAR_SCALE_RATIO,
+			su5: Math.pow(BASE_FONT_SIZE, 5) * MODULAR_SCALE_RATIO
+		},
 		icons: {
 			s: '2rem',
 			m: '3rem',
@@ -154,65 +144,54 @@ export const theme: Theme = {
 			]
 		},
 		transitions: {
-			//wip
 			easing: {
 				easeInOut: 'cubic-bezier(0.4, 0, 0.2, 1)',
-				easeOut: 'cubic-bezier(0.0, 0, 0.2, 1)',
-				easeIn: 'cubic-bezier(0.4, 0, 1, 1)',
-				sharp: 'cubic-bezier(0.4, 0, 0.6, 1)'
+				easeOut: 'cubic-bezier(0.4, 0.0, 1, 1)',
+				easeIn: 'cubic-bezier(0.0, 0.0, 0.2, 1)'
 			},
+
 			duration: {
-				shortest: 150,
+				shortest: 100,
 				shorter: 200,
 				short: 250,
 				standard: 300,
-				complex: 375,
-				enteringScreen: 225,
-				leavingScreen: 195
+				large: 350
 			}
 		},
 		typography: {
-			fontFamily: 'roboto',
+			fontFamily: 'Roboto',
 			fallbackFont: 'Arial',
 			fontWeights: {
 				regular: 400,
 				medium: 600
 			},
 			h1: {
-				fontSize: `${spacing.l()}`,
-				lineHeight: `${spacing.l()}`
+				fontSize: `${MODULAR_SCALE_RATIO ** 4}rem`,
+				lineHeight: MODULAR_SCALE_RATIO
 			},
 			h2: {
-				fontSize: `${spacing.xl()}`,
-				lineHeight: `${spacing.xl()}`
+				fontSize: `${MODULAR_SCALE_RATIO ** 3}rem`,
+				lineHeight: MODULAR_SCALE_RATIO
 			},
 			h3: {
-				fontSize: `${spacing.base()}`,
-				lineHeight: `${spacing.base()}`
-			},
-			h4: {
-				fontSize: `${spacing.m()}`,
-				lineHeight: `${spacing.m()}`
-			},
-			h5: {
-				fontSize: `${spacing.s()}`,
-				lineHeight: `${spacing.s()}`
-			},
-			h6: {
-				fontSize: `${spacing.xs()}`,
-				lineHeight: `${spacing.xs()}`
-			},
-			small: {
-				fontSize: `${spacing.s()}`,
-				lineHeight: `${spacing.s()}`
+				fontSize: `${MODULAR_SCALE_RATIO ** 2}rem`,
+				lineHeight: MODULAR_SCALE_RATIO
 			},
 			base: {
-				fontSize: `${spacing.base()}`,
-				lineHeight: `${spacing.base()}`
+				fontSize: `${MODULAR_SCALE_RATIO}rem`,
+				lineHeight: MODULAR_SCALE_RATIO
 			},
-			large: {
-				fontSize: `${spacing.l()}`,
-				lineHeight: `${spacing.l()}`
+			secondary: {
+				fontSize: `${
+					MODULAR_SCALE_RATIO / Math.pow(MODULAR_SCALE_RATIO, 2)
+				}rem`,
+				lineHeight: MODULAR_SCALE_RATIO
+			},
+			tertiary: {
+				fontSize: `${
+					MODULAR_SCALE_RATIO / Math.pow(MODULAR_SCALE_RATIO, 3)
+				}rem`,
+				lineHeight: MODULAR_SCALE_RATIO
 			}
 		},
 		zIndex: {}
