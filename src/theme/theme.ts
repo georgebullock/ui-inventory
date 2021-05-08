@@ -1,5 +1,17 @@
 const BASE_FONT_SIZE: number = 20;
+
 const MODULAR_SCALE_RATIO: number = 1.25;
+
+// Typography scale
+const typography = {
+	xs: 2,
+	s: 4,
+	m: 8,
+	base: 16,
+	l: 32,
+	xl: 64,
+	xxl: 128
+};
 
 const breakpoints = {
 	mobileM: '22.5em', // 22.5 * 16 = 360px
@@ -181,6 +193,7 @@ export const theme = {
 				}rem`,
 				lineHeight: MODULAR_SCALE_RATIO
 			}
-		}
+		},
+		zIndex: {}
 	}
 };
