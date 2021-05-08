@@ -6,19 +6,21 @@ import { GlobalStyles } from './theme/globalStyles';
 
 const Container = styled.div`
 	display: flex;
-	width: 600px;
-	height: 900px;
+	max-width: 80%;
 	background-color: ${props => props.theme.light.colors.green[70]};
-	font-size: ${props => props.theme.light.typography.base.fontSize};
-	line-height: ${props => props.theme.light.typography.base.lineHeight};
-	margin: 0 auto;
+	font-size: ${props => props.theme.light.typography.secondary.fontSize};
+	line-height: 1.5;
+	margin: ${props => props.theme.light.spacing.xl} auto;
 `;
 
 function App() {
 	return (
 		<ThemeProvider theme={theme}>
 			<GlobalStyles />
-			<Container>UI Inventory</Container>
+			<Container>
+				Velit et in cillum mollit proident esse reprehenderit sint laborum
+				exercitation excepteur deserunt.
+			</Container>
 		</ThemeProvider>
 	);
 }
