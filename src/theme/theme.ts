@@ -1,4 +1,3 @@
-const BASE_FONT_SIZE: number = 20;
 const MODULAR_SCALE_RATIO: number = 1.25;
 
 const breakpoints = {
@@ -14,6 +13,11 @@ export const theme = {
 		borderRadius: {
 			normal: '1rem',
 			small: '0.5rem'
+		},
+		border: {
+			thin: `${MODULAR_SCALE_RATIO}px`,
+			base: `${Math.pow(MODULAR_SCALE_RATIO, 2)}px`,
+			thick: `${Math.pow(MODULAR_SCALE_RATIO, 4)}px`
 		},
 		colors: {
 			blue: {
@@ -67,17 +71,17 @@ export const theme = {
 			}
 		},
 		spacing: {
-			sd5: Math.pow(BASE_FONT_SIZE, 5) / MODULAR_SCALE_RATIO,
-			sd4: Math.pow(BASE_FONT_SIZE, 4) / MODULAR_SCALE_RATIO,
-			sd3: Math.pow(BASE_FONT_SIZE, 3) / MODULAR_SCALE_RATIO,
-			sd2: Math.pow(BASE_FONT_SIZE, 2) / MODULAR_SCALE_RATIO,
-			sd1: BASE_FONT_SIZE / MODULAR_SCALE_RATIO,
-			s0: BASE_FONT_SIZE,
-			su1: BASE_FONT_SIZE * MODULAR_SCALE_RATIO,
-			su2: Math.pow(BASE_FONT_SIZE, 2) * MODULAR_SCALE_RATIO,
-			su3: Math.pow(BASE_FONT_SIZE, 3) * MODULAR_SCALE_RATIO,
-			su4: Math.pow(BASE_FONT_SIZE, 4) * MODULAR_SCALE_RATIO,
-			su5: Math.pow(BASE_FONT_SIZE, 5) * MODULAR_SCALE_RATIO
+			sd5: `${MODULAR_SCALE_RATIO / Math.pow(MODULAR_SCALE_RATIO, 5)}rem`,
+			sd4: `${MODULAR_SCALE_RATIO / Math.pow(MODULAR_SCALE_RATIO, 4)}rem`,
+			sd3: `${MODULAR_SCALE_RATIO / Math.pow(MODULAR_SCALE_RATIO, 3)}rem`,
+			sd2: `${MODULAR_SCALE_RATIO / Math.pow(MODULAR_SCALE_RATIO, 2)}rem`,
+			sd1: `${MODULAR_SCALE_RATIO / MODULAR_SCALE_RATIO}rem`,
+			s0: `${MODULAR_SCALE_RATIO}rem`,
+			su1: `${MODULAR_SCALE_RATIO * MODULAR_SCALE_RATIO}rem`,
+			su2: `${Math.pow(MODULAR_SCALE_RATIO, 2)}rem`,
+			su3: `${Math.pow(MODULAR_SCALE_RATIO, 3)}rem`,
+			su4: `${Math.pow(MODULAR_SCALE_RATIO, 4)}rem`,
+			su5: `${Math.pow(MODULAR_SCALE_RATIO, 5)}rem`
 		},
 		icons: {
 			s: '2rem',
@@ -154,15 +158,15 @@ export const theme = {
 				medium: 600
 			},
 			h1: {
-				fontSize: `${MODULAR_SCALE_RATIO ** 4}rem`,
+				fontSize: `${Math.pow(MODULAR_SCALE_RATIO, 4)}rem`,
 				lineHeight: MODULAR_SCALE_RATIO
 			},
 			h2: {
-				fontSize: `${MODULAR_SCALE_RATIO ** 3}rem`,
+				fontSize: `${Math.pow(MODULAR_SCALE_RATIO, 3)}rem`,
 				lineHeight: MODULAR_SCALE_RATIO
 			},
 			h3: {
-				fontSize: `${MODULAR_SCALE_RATIO ** 2}rem`,
+				fontSize: `${Math.pow(MODULAR_SCALE_RATIO, 2)}rem`,
 				lineHeight: MODULAR_SCALE_RATIO
 			},
 			base: {
