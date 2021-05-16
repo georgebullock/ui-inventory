@@ -10,7 +10,11 @@ export default {
 	component: Stack
 } as Meta;
 
-const Template: Story<StackProps> = args => <Stack {...args} />;
+const Template: Story<StackProps> = args => (
+	<div style={{ height: 960 }}>
+		<Stack {...args} />
+	</div>
+);
 
 const list = [
 	{
