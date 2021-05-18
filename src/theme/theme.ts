@@ -119,7 +119,8 @@ export const theme = {
 				tablet: 'calc(100% - 4rem)',
 				desktopS: '151rem',
 				desktopM: '160rem',
-				desktopL: '200rem'
+				desktopL: '200rem',
+				maxWidth: '60ch'
 			}
 		},
 		shadows: {
