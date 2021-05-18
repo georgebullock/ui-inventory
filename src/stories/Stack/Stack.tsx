@@ -6,7 +6,7 @@ export interface StackProps {
 	space: string;
 	recursive?: boolean;
 	splitAfter?: number;
-	children: ReactElement[];
+	children: ReactElement[] | ReactElement | string;
 }
 
 export const Stack: React.FC<StackProps> = ({
