@@ -2,14 +2,34 @@ import styled, { css } from 'styled-components';
 import { CenterProps } from './Center';
 
 export const StyledCenter = styled.div<CenterProps>(
-	({ theme, padding, borderWidth }) => css`
-		padding: ${padding};
-		border: ${borderWidth} ${theme.light.colors.grey[100]} solid;
-		color: ${theme.light.colors.grey[100]};
-		background-color: ${theme.light.colors.blue[20]};
+	({ max, centerText, gutters, centerChildren }) => css`
+		box-sizing: content-box;
+		margin-left: auto;
+		margin-right: auto;
 
-		& * {
-			color: inherit;
-		}
+		// centerText
+		${centerText &&
+		`
+			text-align: center;
+		`}
+
+		// max
+		max-width: ${max};
+
+		// gutters
+		${gutters &&
+		`
+			padding-left: 1rem;
+			padding-right: 1rem;
+			
+			`}
+
+		// centerChildren
+		${centerChildren &&
+		`
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		`}
 	`
 );
