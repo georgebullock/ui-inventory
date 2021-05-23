@@ -12,7 +12,8 @@ export const theme = {
 	light: {
 		borderRadius: {
 			normal: '1rem',
-			small: '0.5rem'
+			small: '0.5rem',
+			circle: '50%'
 		},
 		border: {
 			thin: `${MODULAR_SCALE_RATIO}px`,
