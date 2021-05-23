@@ -89,7 +89,7 @@ const Content = list.map(item => item.data);
 
 export const Default = Template.bind({});
 Default.args = {
-	max: theme.light.layout.container.maxWidth,
+	maxWidth: theme.light.layout.container.maxWidth,
 	centerText: false,
 	gutters: false,
 	centerChildren: false,

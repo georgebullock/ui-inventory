@@ -3,7 +3,7 @@ import { theme } from '../../theme/theme';
 import { StyledCenter } from './Center.styles';
 
 export interface CenterProps {
-	max?: string;
+	maxWidth?: string;
 	centerText?: boolean;
 	gutters?: boolean;
 	centerChildren?: boolean;
@@ -11,14 +11,14 @@ export interface CenterProps {
 }
 
 export const Center: React.FC<CenterProps> = ({
-	max = theme.light.spacing.s0,
+	maxWidth = theme.light.layout.container.maxWidth,
 	centerText = false,
 	gutters = false,
 	centerChildren = false,
 	children
 }) => (
 	<StyledCenter
-		max={max}
+		maxWidth={maxWidth}
 		centerText={centerText}
 		gutters={gutters}
 		centerChildren={centerChildren}

@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import { CenterProps } from './Center';
 
 export const StyledCenter = styled.div<CenterProps>(
-	({ max, centerText, gutters, centerChildren }) => css`
+	({ maxWidth, centerText, gutters, centerChildren }) => css`
 		box-sizing: content-box;
 		margin-left: auto;
 		margin-right: auto;
@@ -14,7 +14,7 @@ export const StyledCenter = styled.div<CenterProps>(
 		`}
 
 		// max
-		max-width: ${max};
+		max-width: ${maxWidth};
 
 		// gutters
 		${gutters &&
