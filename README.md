@@ -30,7 +30,7 @@ performance.
 
 - [x] The Box
 
-- [ ] The Center
+- [x] The Center
 
 - [ ] The Cluster
 
