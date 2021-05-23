@@ -26,7 +26,7 @@ const list = [
 		data: (
 			<Box
 				padding={theme.light.spacing.s0}
-				borderWidth={theme.light.border.base}
+				borderWidth={theme.light.border.thick}
 			>
 				Box Content 1
 			</Box>
@@ -36,7 +36,7 @@ const list = [
 		data: (
 			<Box
 				padding={theme.light.spacing.s0}
-				borderWidth={theme.light.border.base}
+				borderWidth={theme.light.border.thick}
 			>
 				Box Content 2
 			</Box>
@@ -46,17 +46,17 @@ const list = [
 		data: (
 			<Box
 				padding={theme.light.spacing.s0}
-				borderWidth={theme.light.border.base}
+				borderWidth={theme.light.border.thick}
 			>
 				<Box
 					padding={theme.light.spacing.s0}
-					borderWidth={theme.light.border.base}
+					borderWidth={theme.light.border.thick}
 				>
 					Nested Box Content 1
 				</Box>
 				<Box
 					padding={theme.light.spacing.s0}
-					borderWidth={theme.light.border.base}
+					borderWidth={theme.light.border.thick}
 				>
 					Nested Box Content 2
 				</Box>
@@ -67,7 +67,7 @@ const list = [
 		data: (
 			<Box
 				padding={theme.light.spacing.s0}
-				borderWidth={theme.light.border.base}
+				borderWidth={theme.light.border.thick}
 			>
 				Stack Content 4
 			</Box>
