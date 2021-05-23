@@ -21,7 +21,7 @@ const list = [
 		data: (
 			<Box
 				padding={theme.light.spacing.s0}
-				borderWidth={theme.light.border.base}
+				borderWidth={theme.light.border.thick}
 			>
 				Box Content 1
 			</Box>
@@ -31,7 +31,7 @@ const list = [
 		data: (
 			<Box
 				padding={theme.light.spacing.s0}
-				borderWidth={theme.light.border.base}
+				borderWidth={theme.light.border.thick}
 			>
 				Box Content 2
 			</Box>
@@ -41,17 +41,17 @@ const list = [
 		data: (
 			<Box
 				padding={theme.light.spacing.s0}
-				borderWidth={theme.light.border.base}
+				borderWidth={theme.light.border.thick}
 			>
 				<Box
 					padding={theme.light.spacing.s0}
-					borderWidth={theme.light.border.base}
+					borderWidth={theme.light.border.thick}
 				>
 					Nested Box Content 1
 				</Box>
 				<Box
 					padding={theme.light.spacing.s0}
-					borderWidth={theme.light.border.base}
+					borderWidth={theme.light.border.thick}
 				>
 					Nested Box Content 2
 				</Box>
@@ -62,7 +62,7 @@ const list = [
 		data: (
 			<Box
 				padding={theme.light.spacing.s0}
-				borderWidth={theme.light.border.base}
+				borderWidth={theme.light.border.thick}
 			>
 				Stack Content 4
 			</Box>
@@ -72,7 +72,7 @@ const list = [
 		data: (
 			<Box
 				padding={theme.light.spacing.s0}
-				borderWidth={theme.light.border.base}
+				borderWidth={theme.light.border.thick}
 			>
 				Stack Content 5
 			</Box>
@@ -84,13 +84,6 @@ const Content = list.map(item => item.data);
 
 export const Default = Template.bind({});
 Default.args = {
-	space: theme.light.spacing.s0,
-	recursive: false,
-	children: Content
-};
-
-export const Recursive = Template.bind({});
-Recursive.args = {
 	space: theme.light.spacing.s0,
 	recursive: true,
 	children: Content

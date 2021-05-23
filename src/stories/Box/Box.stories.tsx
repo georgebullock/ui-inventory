@@ -16,6 +16,6 @@ const Content = <div>Box</div>;
 export const Default = Template.bind({});
 Default.args = {
 	padding: theme.light.spacing.s0,
-	borderWidth: theme.light.border.base,
+	borderWidth: theme.light.border.thick,
 	children: Content
 };
