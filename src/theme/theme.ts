@@ -12,7 +12,8 @@ export const theme = {
 	light: {
 		borderRadius: {
 			normal: '1rem',
-			small: '0.5rem'
+			small: '0.5rem',
+			circle: '50%'
 		},
 		border: {
 			thin: `${MODULAR_SCALE_RATIO}px`,
@@ -119,7 +120,8 @@ export const theme = {
 				tablet: 'calc(100% - 4rem)',
 				desktopS: '151rem',
 				desktopM: '160rem',
-				desktopL: '200rem'
+				desktopL: '200rem',
+				maxWidth: '60ch'
 			}
 		},
 		shadows: {
