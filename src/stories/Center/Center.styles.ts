@@ -7,16 +7,13 @@ export const StyledCenter = styled.div<CenterProps>(
 		margin-left: auto;
 		margin-right: auto;
 
-		// centerText
 		${centerText &&
 		`
 			text-align: center;
 		`}
 
-		// max
 		max-width: ${maxWidth};
 
-		// gutters
 		${gutters &&
 		`
 			padding-left: 1rem;
@@ -24,7 +21,6 @@ export const StyledCenter = styled.div<CenterProps>(
 			
 			`}
 
-		// centerChildren
 		${centerChildren &&
 		`
 			display: flex;
