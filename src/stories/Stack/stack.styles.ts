@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { StackProps } from './Stack';
 
-export const StackContainer = styled.div<StackProps>(
+export const StyledStack = styled.div<StackProps>(
 	({ space, recursive, splitAfter }) => css`
 		display: flex;
 		flex-direction: column;
