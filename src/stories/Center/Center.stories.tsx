@@ -23,69 +23,64 @@ const Template: Story<CenterProps> = args => (
 
 const list = [
 	{
-		data: (
-			<Box
-				padding={theme.light.spacing.s0}
-				borderWidth={theme.light.border.thick}
-			>
-				Box Content 1
-			</Box>
-		)
+		data: {
+			padding: `${theme.light.spacing.s0}`,
+			borderWidth: `${theme.light.border.thick}`,
+			content: 'Box Content 1'
+		}
 	},
 	{
-		data: (
-			<Box
-				padding={theme.light.spacing.s0}
-				borderWidth={theme.light.border.thick}
-			>
-				Box Content 2
-			</Box>
-		)
+		data: {
+			padding: `${theme.light.spacing.s0}`,
+			borderWidth: `${theme.light.border.thick}`,
+			content: 'Box Content 2'
+		}
 	},
 	{
-		data: (
-			<Box
-				padding={theme.light.spacing.s0}
-				borderWidth={theme.light.border.thick}
-			>
+		data: {
+			padding: `${theme.light.spacing.s0}`,
+			borderWidth: `${theme.light.border.thick}`,
+			content: [
 				<Box
 					padding={theme.light.spacing.s0}
 					borderWidth={theme.light.border.thick}
 				>
 					Nested Box Content 1
-				</Box>
+				</Box>,
 				<Box
 					padding={theme.light.spacing.s0}
 					borderWidth={theme.light.border.thick}
 				>
 					Nested Box Content 2
 				</Box>
-			</Box>
-		)
+			]
+		}
 	},
 	{
-		data: (
-			<Box
-				padding={theme.light.spacing.s0}
-				borderWidth={theme.light.border.thick}
-			>
-				Stack Content 4
-			</Box>
-		)
+		data: {
+			padding: `${theme.light.spacing.s0}`,
+			borderWidth: `${theme.light.border.thick}`,
+			content: 'Box Content 4'
+		}
 	},
 	{
-		data: (
-			<Box
-				padding={theme.light.spacing.s0}
-				borderWidth={theme.light.border.base}
-			>
-				Stack Content 5
-			</Box>
-		)
+		data: {
+			padding: `${theme.light.spacing.s0}`,
+			borderWidth: `${theme.light.border.thick}`,
+			content: 'Box Content 5'
+		}
 	}
 ];
 
-const Content = list.map(item => item.data);
+const Content = list.map((item, index) => (
+	<Box
+		key={index}
+		padding={item.data.padding}
+		borderWidth={item.data.borderWidth}
+	>
+		{item.data.content}
+	</Box>
+));
 
 export const Default = Template.bind({});
 Default.args = {

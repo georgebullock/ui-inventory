@@ -121,7 +121,18 @@ export const theme = {
 				desktopS: '151rem',
 				desktopM: '160rem',
 				desktopL: '200rem',
-				maxWidth: '60ch'
+				maxWidth: '60ch',
+				justifyStart: 'flex-start',
+				justifyEnd: 'flex-end',
+				justifyCenter: 'center',
+				justifyBetween: 'space-between',
+				justifyAround: 'space-around',
+				justifyEvenly: 'space-evenly',
+				alignStart: 'flex-start',
+				alignEnd: 'flex-end',
+				alignCenter: 'center',
+				alignStretch: 'stretch',
+				alignBaseline: 'baseline'
 			}
 		},
 		shadows: {
