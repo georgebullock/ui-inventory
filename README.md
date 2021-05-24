@@ -32,7 +32,7 @@ performance.
 
 - [x] The Center
 
-- [ ] The Cluster
+- [x] The Cluster
 
 - [ ] The Sidebar
 
