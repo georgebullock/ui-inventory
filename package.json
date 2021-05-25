@@ -15,7 +15,7 @@
 		"lint": "eslint --ignore-path .gitignore",
 		"check-types": "tsc",
 		"validate": "npm run check-types && npm run format && npm run lint && npm run build",
-		"chromatic": "npx chromatic --project-token=2eca33cbec90 "
+		"chromatic": "npx chromatic --project-token=2eca33cbec90 --auto-accept-changes"
 	},
 	"eslintConfig": {
 		"extends": [
