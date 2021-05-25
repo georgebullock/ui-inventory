@@ -2,7 +2,6 @@ import React from 'react';
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import { Story, Meta } from '@storybook/react/types-6-0';
 import { Cluster, ClusterProps } from './Cluster';
-import { Box } from './../Box/Box';
 import { theme } from '../../theme/theme';
 
 export default {
@@ -15,50 +14,49 @@ const Template: Story<ClusterProps> = args => <Cluster {...args} />;
 const list = [
 	{
 		data: {
-			padding: `${theme.light.spacing.s0}`,
-			borderWidth: `${theme.light.border.thick}`,
-			content: 'Box Content 1'
+			content: 'List Item 1'
 		}
 	},
 	{
 		data: {
-			padding: `${theme.light.spacing.s0}`,
-			borderWidth: `${theme.light.border.thick}`,
-			content: 'Box Content 2'
+			content: 'List Item 2'
 		}
 	},
 	{
 		data: {
-			padding: `${theme.light.spacing.s0}`,
-			borderWidth: `${theme.light.border.thick}`,
-			content: 'Box Content 3'
+			content: 'List Item 3'
 		}
 	},
 	{
 		data: {
-			padding: `${theme.light.spacing.s0}`,
-			borderWidth: `${theme.light.border.thick}`,
-			content: 'Box Content 4'
+			content: 'List Item 4'
 		}
 	},
 	{
 		data: {
-			padding: `${theme.light.spacing.s0}`,
-			borderWidth: `${theme.light.border.thick}`,
-			content: 'Box Content 5'
+			content: 'List Item 5'
 		}
 	}
 ];
 
-const Content = list.map((item, index) => (
-	<Box
-		key={index}
-		padding={item.data.padding}
-		borderWidth={item.data.borderWidth}
-	>
-		{item.data.content}
-	</Box>
-));
+const Content = list.map((item, index) => {
+	return (
+		<li
+			key={index}
+			style={{
+				padding: theme.light.spacing.s0,
+				borderWidth: theme.light.border.thick,
+				borderColor: theme.light.colors.blue[40],
+				borderStyle: 'solid',
+				backgroundColor: theme.light.colors.blue[20],
+				borderRadius: theme.light.borderRadius.small,
+				color: theme.light.colors.blue[100]
+			}}
+		>
+			{item.data.content}
+		</li>
+	);
+});
 
 export const Default = Template.bind({});
 Default.args = {

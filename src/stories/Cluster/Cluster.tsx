@@ -6,7 +6,7 @@ export interface ClusterProps {
 	justify: string;
 	align?: string;
 	space?: string;
-	children: ReactElement<HTMLLIElement>[] | ReactElement<HTMLLIElement>;
+	children: ReactElement[] | ReactElement;
 }
 
 export const Cluster: React.FC<ClusterProps> = ({
