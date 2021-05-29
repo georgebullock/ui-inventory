@@ -25,12 +25,12 @@
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "lint-staged"
+			"pre-commit": "lint-staged && jest --findRelatedTests"
 		}
 	},
 	"lint-staged": {
 		"*.+(js|ts|tsx)": [
-			"eslint"
+			"eslint --fix"
 		],
 		"**/*.+(js|json|ts|tsx)": [
 			"prettier --write",
