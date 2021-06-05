@@ -6,6 +6,7 @@
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
+		"test:staged": "cross-env CI=true yarn test --findRelatedTests",
 		"eject": "react-scripts eject",
 		"storybook": "start-storybook -p 6006 -s public",
 		"build-storybook": "build-storybook -s public",
@@ -31,7 +32,10 @@
 	"lint-staged": {
 		"*.+(js|ts|tsx)": [
 			"eslint --fix",
-			"yarn run validate"
+			"yarn test:staged"
+		],
+		"*.+(ts|tsx)": [
+			"tsc-files --noEmit"
 		],
 		"**/*.+(js|json|ts|tsx)": [
 			"prettier --write"
@@ -74,7 +78,9 @@
 		"@storybook/react": "^6.1.19",
 		"@types/styled-components": "^5.1.8",
 		"chromatic": "^5.8.2",
+		"cross-env": "^7.0.3",
 		"prettier": "^2.2.1",
-		"styled-components": "^5.2.1"
+		"styled-components": "^5.2.1",
+		"tsc-files": "^1.1.2"
 	}
 }
