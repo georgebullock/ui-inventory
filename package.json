@@ -14,7 +14,7 @@
 		"check-format": "npm run prettier -- --list-different",
 		"lint": "eslint --ignore-path .gitignore",
 		"check-types": "tsc",
-		"validate": "npm run check-types && npm run format && npm run lint && npm run build",
+		"validate": "npm run check-types && npm run format && npm run lint && npm run test -- --watchAll=false && npm run build",
 		"chromatic": "npx chromatic --project-token=2eca33cbec90 --auto-accept-changes"
 	},
 	"eslintConfig": {
@@ -25,16 +25,16 @@
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "lint-staged && jest --findRelatedTests"
+			"pre-commit": "lint-staged"
 		}
 	},
 	"lint-staged": {
 		"*.+(js|ts|tsx)": [
-			"eslint --fix"
+			"eslint --fix",
+			"yarn run validate"
 		],
 		"**/*.+(js|json|ts|tsx)": [
-			"prettier --write",
-			"git add"
+			"prettier --write"
 		]
 	},
 	"browserslist": {
