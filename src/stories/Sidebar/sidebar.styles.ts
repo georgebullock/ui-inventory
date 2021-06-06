@@ -15,19 +15,20 @@ export const StyledSidebar = styled.div<StyledSidebarProps>(
 		& > * {
 			display: flex;
 			flex-wrap: wrap;
-			${theme.light.spacing.s0
-				? `margin: calc(${theme.light.spacing.s0} / 2 * -1);`
-				: null}
+			${theme.light.spacing.s0 ? `margin: calc(${space} / 2 * -1);` : null}
+			${noStretch ? `align-items: flex-start;` : `align-items: stretch;`}
 		}
 
 		& > * > * {
 			${theme.light.spacing.s0 ? `margin: calc(${space} / 2);` : null}
-			flex-basis: 20ch;
+			flex-basis: ${sideWidth};
 			flex-grow: 1;
 		}
 
 		& > * > ${sideLeft ? `:last-child` : `:first-child`} {
-			${theme.light.spacing.s0 ? `min-width: calc(50% - 1rem);` : null}
+			${theme.light.spacing.s0
+				? `min-width: calc(${contentMin} - 1rem);`
+				: null}
 			flex-basis: 0;
 			flex-grow: 999;
 		}
