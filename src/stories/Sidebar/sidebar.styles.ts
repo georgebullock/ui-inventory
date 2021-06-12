@@ -8,8 +8,6 @@ export interface StyledSidebarProps {
 	noStretch?: boolean;
 }
 
-// ? Test comment
-
 export const StyledSidebar = styled.div<StyledSidebarProps>(
 	({ theme, sideLeft, sideWidth, contentMin, space, noStretch }) => css`
 		overflow: hidden;
