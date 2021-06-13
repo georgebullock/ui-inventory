@@ -69,8 +69,8 @@ const Content = list.map((item, index) => (
 
 export const Default = Template.bind({});
 Default.args = {
-	threshold: `50rem`,
+	breakpoint: `50rem`,
 	space: theme.light.spacing.s0,
-	limit: 5,
+	maxItemsPerRow: 5,
 	children: Content
 };
