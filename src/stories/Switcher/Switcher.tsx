@@ -10,9 +10,9 @@ export interface SwitcherProps {
 }
 
 export const Switcher: React.FC<SwitcherProps> = ({
-	threshold = theme.light.spacing.s0,
+	threshold = `50rem`,
 	space = theme.light.spacing.s0,
-	limit = 4,
+	limit = 5,
 	children
 }) => (
 	<StyledSwitcher threshold={threshold} space={space} limit={limit}>

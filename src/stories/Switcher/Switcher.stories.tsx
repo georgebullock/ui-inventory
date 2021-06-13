@@ -69,8 +69,8 @@ const Content = list.map((item, index) => (
 
 export const Default = Template.bind({});
 Default.args = {
-	threshold: theme.light.spacing.s0,
+	threshold: `50rem`,
 	space: theme.light.spacing.s0,
-	limit: 4,
+	limit: 5,
 	children: Content
 };
